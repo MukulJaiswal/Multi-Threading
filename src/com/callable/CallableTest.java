@@ -19,7 +19,7 @@ class MyAddthread implements Callable<Integer> {
 
 	/**
 	 * The Callable interface returns the value from call() where as Runnable/Thread
-	 * does returns a value using call()
+	 * does returns a value using call()....
 	 */
 
 	@Override
