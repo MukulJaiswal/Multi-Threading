@@ -1,11 +1,14 @@
-package com.waitnotify.producerconsumer;
+package com.waitnotify.producerconsumer.blockingqueue;
 
 import java.util.LinkedList;
 
 //Class is final as this class should not be overridden
 final class ProducerConsumer {
 
+	//Interview question - Here list is final but still we are able to add the element.
+	//That's because we can do that. If list is final,we cannot make an object of that list again.
 	private final LinkedList<Integer> list = new LinkedList<Integer>();
+	
 	public static final int CAPACITY = 2;
 
 	void producer() throws InterruptedException {
@@ -14,7 +17,7 @@ final class ProducerConsumer {
 		while (true) {
 			synchronized (this) {
 				while (list.size() == CAPACITY) {
-					wait();
+					wait();//Wait method should always be used in synchronized block otherwise it will give IllegalMonitorStateException
 				}
 				
 				System.out.println("Producer produced   : " + value);
