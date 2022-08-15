@@ -75,6 +75,8 @@ public class StoppingThread {
 		 * MIN_PRIORITY - 1 being the minimum priority 
 		 * NORM_PRIORITY - 5 is the normally priority, this is the default priority value. 
 		 * MAX_PRIORITY - 10 being the max priority.
+		 * 
+		 * We can see that CopyThread is executed more number of times as its priority is more.
 		 */
 		CopyTask copyTask = new CopyTask();
 		Thread copyThread = new Thread(copyTask);
@@ -85,6 +87,5 @@ public class StoppingThread {
 		ProgressTask progressTask = new ProgressTask();
 		Thread progressThread = new Thread(progressTask);
 		progressThread.start();
-
 	}
 }

@@ -29,11 +29,11 @@ class StudentComparator implements Comparator<Student> {
 	}
 }
 
-public class PriorityQueueImpl {
+public class PriorityBlockingQueueImpl {
 
 	public static void main(String[] args) {
 
-		// By default it is a min heap
+		// By default it is a min heap i.e minimum element will be fetched first
 		PriorityBlockingQueue<Integer> queue = new PriorityBlockingQueue<Integer>();
 		queue.add(10);
 		queue.add(2);
@@ -42,6 +42,8 @@ public class PriorityQueueImpl {
 		System.out.println(queue.poll());
 		System.out.println(queue.poll());
 		System.out.println(queue.poll());
+		
+		/********************Making a Max Heap PriorityBlockingQueue. ******************/
 
 //		PriorityBlockingQueue<Student> queue1 = new PriorityBlockingQueue<Student>(5, new StudentComparator());
 

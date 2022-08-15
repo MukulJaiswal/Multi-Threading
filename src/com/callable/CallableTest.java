@@ -27,7 +27,6 @@ class MyAddthread implements Callable<Integer> {
 		int sum = x + y;
 		return sum;
 	}
-
 }
 
 public class CallableTest {
@@ -50,8 +49,8 @@ public class CallableTest {
 //			}
 //		});
 
-		while (future.isDone())
-			;
+		while (!future.isDone())
+			;//wait
 
 		int result = future.get();
 		System.out.println("The result is : " + result);

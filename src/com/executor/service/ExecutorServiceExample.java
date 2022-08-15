@@ -44,8 +44,11 @@ public class ExecutorServiceExample {
 		// A new thread is created to initiate copy
 		// from a.txt to c.txt
 		// Thread-1
-		
-		/** Executing first thread. thread.start() will execute whatever we pass in the run() method */
+
+		/**
+		 * Executing first thread. thread.start() will execute whatever we pass in the
+		 * run() method
+		 */
 //		new Thread(new CopyTask(sourceFile1, destFile1)).start();
 
 		// A new thread to initiate copy from
@@ -55,6 +58,10 @@ public class ExecutorServiceExample {
 //		new Thread(new CopyTask(sourceFile2, destFile2)).start();
 
 		/**
+		 * 
+		 * Assume you are submitting 100 copy tasks,then executor service uses a fixed
+		 * thread pool of size 5 to execute them.
+		 * 
 		 * Thread creation is a costly activity as it includes creating a separate
 		 * execution context, stack etc.. Hence we should refrain from creating too many
 		 * threads. And also creating a thread for each task is not a good idea, instead
@@ -64,28 +71,6 @@ public class ExecutorServiceExample {
 
 		ExecutorService executorService = Executors.newFixedThreadPool(5);
 		executorService.execute(new CopyTask(sourceFile1, destFile1));
-		executorService.execute(new CopyTask(sourceFile2, destFile2));
-		
+		executorService.execute(new CopyTask(sourceFile2, destFile2));		
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -34,7 +34,7 @@ class Sample {
 		 */
 
 		try {
-			Thread.sleep(1);//By this other thread will get a chance to set the value.
+			Thread.sleep(1);// By this other thread will get a chance to set the value.
 		} catch (Exception e) {
 		}
 
@@ -78,8 +78,9 @@ public class Synchronized {
 		// Here main thread called the join operation
 		// on t1 and t2. join() operations waits for
 		// thread to complete before returning.
-		
-		//When t1 completes the processing then only t2 starts the processing. This is joins on thread.
+
+		// When t1 completes the processing then only t2 starts the processing. This is
+		// joins on thread.
 		try {
 			t1.join();
 			t2.join();
@@ -92,7 +93,22 @@ public class Synchronized {
 }
 
 /**
- * Reentrant Locks is preferred over Synchronized lock. Because this prevents the thread from starvation
- * //https://www.geeksforgeeks.org/reentrant-lock-java/
+ * Reentrant Locks is preferred over Synchronized lock. Because this prevents
+ * the thread from starvation
+ * https://www.geeksforgeeks.org/reentrant-lock-java/
  */
 
+/**
+ * Definition and its use case
+ * 
+ * Thread Synchronization Thread synchronization is used to solve concurrency
+ * problems that exist in parallel processing. Concurrency problem exist when
+ * more than one thread is accessing the same shared resource.
+ * 
+ * E.g.
+ * 
+ * 1) More than one transaction is being performed on the same account
+ * 
+ * 2) Multiple resources are booking tickets for the same train from different
+ * locations.
+ */

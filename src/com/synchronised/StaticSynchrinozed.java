@@ -39,9 +39,16 @@ class Check {
 			b++;
 		}
 	}
-	
-	//We can apply synchronized on static method as well so that in order to achieve sync on static variable.
-//	public static synchronized increment() {
-//		a++;
-//	}
+
+	// We can apply synchronized on static method as well so that in order to
+	// achieve sync on static variable.
+	//	public static synchronized increment() {
+	//		a++;
+	//	}
+
+	/**
+	 * Synchronized can be done by using synchronized method as well as in synchronized block.
+	 * Synchronized block is preferred because it allows us to synchorized only that
+	 * peace of code which we want instead of whole function.
+	 */
 }
