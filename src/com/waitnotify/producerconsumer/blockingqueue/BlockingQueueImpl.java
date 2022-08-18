@@ -7,7 +7,7 @@ import java.util.concurrent.BlockingQueue;
  * Producer Consumer problem with blocking queue.
  * @author Mukul
  * 
- * BlockingQueue is an Interface. BlockingQueue implementations are : 
+ * BlockingQueue is an Interface. This provides a thead safe implementation. BlockingQueue implementations are : 
  * 1.ArrayBlockingQueue
  * 2.LinkedBlockingQueue
  * 3.PriorityBlockingQueue
@@ -35,6 +35,13 @@ import java.util.concurrent.BlockingQueue;
  * 
  * 3.offer(o, timeout, timeunit) : offer and poll is overloaded with timeout
  * 4.poll(timeout, timeunit) : offer and poll is overloaded with timeout
+ *
+ */
+
+/**
+ * If we are using BlockingQueue then wait() and notify() is not used as it takes care of this 
+ * already by using put() and take() functions
+ * @author Mukul
  *
  */
 

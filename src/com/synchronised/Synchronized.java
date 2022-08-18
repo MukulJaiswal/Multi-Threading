@@ -94,8 +94,15 @@ public class Synchronized {
 
 /**
  * Reentrant Locks is preferred over Synchronized lock. Because this prevents
- * the thread from starvation
+ * the thread from starvation.
+ * 
  * https://www.geeksforgeeks.org/reentrant-lock-java/
+ * 
+ * Reentrant Locks also offer a fairness parameter, by which the lock would
+ * abide by the order of the lock request i.e. after a thread unlocks the
+ * resource, the lock would go to the thread which has been waiting for the
+ * longest time. This fairness mode is set up by passing true to the constructor
+ * of the lock. 
  */
 
 /**

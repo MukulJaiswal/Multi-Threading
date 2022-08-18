@@ -10,6 +10,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+/**
+ * This example will show the difference in time taken by Parallel Processing vs Serial Processing
+ * Using Callable in this example and output in Future Object
+ * @author Mukul
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) throws Exception {

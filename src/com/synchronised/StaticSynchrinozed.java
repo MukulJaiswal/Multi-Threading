@@ -40,11 +40,14 @@ class Check {
 		}
 	}
 
-	// We can apply synchronized on static method as well so that in order to
-	// achieve sync on static variable.
-	//	public static synchronized increment() {
-	//		a++;
-	//	}
+	/**
+	 * We can apply synchronized on static method as well so that in order to
+	 * achieve sync on static variable. 
+	 * public static synchronized increment() {
+	 * 	  a++; 
+	 * }
+	 * 
+	 */
 
 	/**
 	 * Synchronized can be done by using synchronized method as well as in synchronized block.

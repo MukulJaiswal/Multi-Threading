@@ -19,4 +19,19 @@ public class Executor {
 			ExecutorService executorService = Executors.newFixedThreadPool(5);
 		 *  Future<Integer> future = executorService.submit(new MyAddthread(x, y));
 	 */
+	
+	/**
+	 * Instead of making individual thread, we can use executor service create a thread pool for us.
+	 * 
+	 * For Example
+	 * Thread thread1 = new Thread(new Runnable() {public void run() {});
+	 * Thread thread2 = new Thread(new Runnable() {public void run() {});
+	 * Thread thread3 = new Thread(new Runnable() {public void run() {});
+	 * 
+	 * Above we're making a 3 thread to execute the task. This can be replaced with ExecutorFramework
+	 * 
+	 * ExecutorService executorService = Executors.newFixedThreadPool(3);
+	 * executorService.execute(new Runnable() {public void run() {});
+	 * 
+	 */
 }

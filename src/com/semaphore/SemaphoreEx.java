@@ -40,6 +40,7 @@ public class SemaphoreEx {
   public static void main(String [] args) {
 	  
 	  //Here 2 means two threads can enter into the critical section
+	  //If it is 1 then it acts as a normal lock which we did using synchronized block or using ReadWriteLock
 	  Semaphore semaphore = new Semaphore(2);
 	  
 	  //The same semaphore object needs to be passed to the constructor

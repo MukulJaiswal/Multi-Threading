@@ -2,14 +2,21 @@ package com.synchronised;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/**
+ * Alternative of synchronized keyword. Benefit is it prevents the thread from Starvation.
+ * @author Mukul
+ *
+ */
 class Sample1 {
 
 	private int x;
 
 	// ReadWriteLock object for requesting the lock.
-	ReadWriteLock rw_lock = new ReentrantReadWriteLock();
+//	ReadWriteLock rw_lock = new ReentrantReadWriteLock();
+	ReentrantLock rw_lock = new ReentrantLock(true);
 
 	public int getX() {
 		return x;
@@ -24,8 +31,9 @@ class Sample1 {
 		// Request the write lock as the
 		// operation is intended to modify the data.
 
-		Lock lock = rw_lock.writeLock();
-		lock.lock();
+//		Lock lock = rw_lock.writeLock();
+//		lock.lock();
+		rw_lock.lock();
 
 		try {
 
@@ -42,7 +50,8 @@ class Sample1 {
 
 		} finally {
 			// Unlock
-			lock.unlock();
+//			lock.unlock();
+			rw_lock.unlock();
 		}
 	}
 

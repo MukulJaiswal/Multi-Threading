@@ -71,7 +71,8 @@ class TicketReservationSystem {
 		// For demo purpose.
 		// Intentionally passed on control to other thread
 		// before updating available tickets.
-		// This is to demonstrate that what if control is switched here..
+		// This is to demonstrate that what if control is switched here..2
+		//https://www.geeksforgeeks.org/java-concurrency-yield-sleep-and-join-methods/
 		Thread.yield();
 
 		// Reduce the available ticket count.
